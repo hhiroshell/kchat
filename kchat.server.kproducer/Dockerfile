@@ -6,6 +6,6 @@ ARG JAR_FILE
 
 LABEL version=${IMAGE_VERSION}
 
-ADD target/${JAR_FILE} ./
+ADD target/${JAR_FILE} /usr/share/kchat/kproducer.jar
 
-CMD ["java", "-jar", "${JAR_FILE}"]
+CMD ["/usr/bin/java", "-jar", "/usr/share/kchat/kproducer.jar"]
