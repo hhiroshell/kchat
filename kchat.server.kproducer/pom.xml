@@ -60,8 +60,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>hhiroshell/${project.build.finalName}</repository>
+                    <repository>docker.io/hhayakaw/${project.build.finalName}</repository>
                     <tag>${project.version}</tag>
+                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
