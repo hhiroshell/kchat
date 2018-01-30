@@ -14,7 +14,7 @@ public class MessageController {
     @Autowired
     private AsyncHelper asyncHelper;
 
-    @KafkaListener(topics = "test", group = "foo")
+    @KafkaListener(topics = "chatroom", group = "foo")
 //    @KafkaListener(topics = "test")
     public void listen(String message) {
         System.out.println("Received Messasge in topic test: " + message);
