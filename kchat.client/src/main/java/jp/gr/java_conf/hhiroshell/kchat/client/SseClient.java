@@ -21,10 +21,13 @@ public class SseClient {
 
     private final String name;
 
+    private int received;
+
     SseClient(URI producer, URI consumer, String name) {
         this.producer = producer;
         this.consumer = consumer;
         this.name = name;
+        this.received = 0;
     }
 
     void connectAndWait() {
@@ -71,7 +74,7 @@ public class SseClient {
             return;
         }
         System.out.print("            \r");
-        System.out.println(message);
+        System.out.println(message + " (received: " + (++received) + ")");
         System.out.print(name + ": ");
     }
 
