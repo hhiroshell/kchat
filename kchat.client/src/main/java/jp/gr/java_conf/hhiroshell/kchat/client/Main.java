@@ -12,8 +12,10 @@ public class Main {
 
         URI producer = null, consumer = null;
         try {
-            producer = URI.create("http://" + args[0] + ":19092/api/topics/test");
-            consumer = URI.create("http://" + args[0] + ":29092/sse/connect");
+//            producer = URI.create("http://" + args[0] + ":19092/api/topics/test");
+//            consumer = URI.create("http://" + args[0] + ":29092/sse/connect");
+            producer = URI.create("http://" + args[0] + ":30192/api/topics/chatroom");
+            consumer = URI.create("http://" + args[0] + ":30292/sse/connect");
         } catch (IllegalArgumentException e) {
             Utils.kchatPrintln("ERROR: The given uri string violates RFC2396 syntax...");
             System.exit(1);
