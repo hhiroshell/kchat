@@ -40,7 +40,7 @@
     </dependencies>
 
     <build>
-        <finalName>kproducer</finalName>
+        <finalName>kchat.server.kproducer</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
